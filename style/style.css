@@ -16,70 +16,43 @@
 }
 
 body{
-    
+    max-width: 480px;
+    min-width: 320px;
     font-family: var(--font-padrao);
+    height: 100vh;
 }
 
 *{
     padding: 0px;
     margin: 0px;
 }
-div.left-nav {
-    display: flex;
-    align-items: center;
-    max-width: 1000px;
-    min-width: 250px;
-    width: 20%;
-    float: left;
-    text-align: center;
-    height: 100vh;
-    background-size: 400% 400%;
-    background-image: linear-gradient(45deg, #b0c564, #f8744c, #463935, #dbb6af );
-    animation: mygradient 9s ease infinite;
+#menu{
+    display: none;
 }
 
-@keyframes mygradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.nav {
+#icon-menu{
+    background-color: var(--cor3);
+    position: fixed;
+    right: 0;
+    top: 100%;
+    width: 100vw;
+    margin-top: -2.5em;
+    height: 15%;
     text-align: center;
+}
+#icons{
     color: white;
-    text-decoration: none;
-    font-family: var(--font-destaque);
+    margin-top: 5px;
     font-size: 30px;
-    font-weight: normal;
-    height: 30px;
-    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.329);
+    margin-right: 30px;
 }
-nav h1 {
-    margin: 30px;
-    text-align: center;
+#last-icon{
     color: white;
-    font-family: var(--font-destaque);
-    font-size: 60px;
-    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.329);
-}
-main{  
-    text-align: center;
-    float: right;
-    width: 49.4%;
-    float: right;
-    max-width: 1000px;
-    min-width: 250px;
+    margin-top: 5px;
+    font-size: 30px;
 }
 
-.logo {
-    max-width: 350px;
-    min-width: 250px;
-    display: block;
-    margin: auto;
+
+.logo{
+    display: none;
 }
