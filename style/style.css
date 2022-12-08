@@ -22,8 +22,6 @@ body{
     max-width: 480px;
     min-width: 300px;
     font-family: var(--font-padrao);
-    height: 100vh;
-    background-image: url('../videos/video1.mp4');
 }
 
 *{
@@ -31,23 +29,28 @@ body{
     margin: 0px;
 }
 
+main{
+    height: 85vh;
+}
 .bg_video{
     position: fixed; 
-    right: 0; 
-    bottom: 0;
-    min-width: 10%; 
-    min-height: 10%;
-    width: auto; 
-    height: auto; 
+    top: 1.5;
+    right: 2.5;
+    left: 2.5;
+    bottom: 2.5;
+    min-width: -1000%; 
+    min-height: -1000%;
+    width: 150vw; 
     z-index: -1000;
-    background: url(images/nome-do-video.jpg) no-repeat;
+    background: url(videos/video1.mp4);
     background-size: cover; 
+    
 }
 
 
 #title{
     display: none;
-    margin: auto;
+    /*margin: auto;
     width: 100vw;
     height: 13%;
     position: fixed;
@@ -55,10 +58,12 @@ body{
     text-align: center;
     font-family: var(--font-destaque);
     font-size: 40px;
-    /*background-size: 200% 200%;
+    background-size: 200% 200%;
     background-image: linear-gradient(45deg, #daa520, #463935, #535353, #463935, #cf980c );
-    animation: mygradient 9s ease infinite;*/
+    animation: mygradient 9s ease infinite;
+*/
 }
+
 
 @keyframes mygradient {
     0% {
@@ -76,6 +81,8 @@ body{
     display: none;
 }
 
+
+
 #icon-menu{
     background-color: var(--cor3);
     position: fixed;
@@ -83,7 +90,7 @@ body{
     top: 100%;
     width: 100vw;
     margin-top: -2.5em;
-    height: 15%;
+    height: 15vh;
     text-align: center;
     background-size: 200% 200%;
     background-image: linear-gradient(45deg, #daa520, #463935, #535353, #463935, #cf980c );
@@ -103,9 +110,8 @@ body{
 }
 
 .logo{
-    position: relative;
-    width: 210px;
-    margin-top: 40vh;
-    margin-left: 85px;
-    
+    display: table-cell;
+    vertical-align: middle;
+    width: 160px;
+    margin: auto;
 }
