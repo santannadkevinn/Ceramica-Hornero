@@ -20,7 +20,7 @@
 
 body{
     max-width: 480px;
-    min-width: 270px;
+    min-width: 300px;
     font-family: var(--font-padrao);
     height: 100vh;
     background-image: url('../videos/video1.mp4');
