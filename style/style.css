@@ -23,12 +23,27 @@ body{
     min-width: 270px;
     font-family: var(--font-padrao);
     height: 100vh;
+    background-image: url('../videos/video1.mp4');
 }
 
 *{
     padding: 0px;
     margin: 0px;
 }
+
+.bg_video{
+    position: fixed; 
+    right: 0; 
+    bottom: 0;
+    min-width: 10%; 
+    min-height: 10%;
+    width: auto; 
+    height: auto; 
+    z-index: -1000;
+    background: url(images/nome-do-video.jpg) no-repeat;
+    background-size: cover; 
+}
+
 
 #title{
     margin: auto;
@@ -87,7 +102,10 @@ body{
     font-size: 30px;
 }
 
-
 .logo{
-    display: none;
+    position: relative;
+    width: auto;
+    margin-top: 40vh;
+    margin-left: 85px;
+    
 }
