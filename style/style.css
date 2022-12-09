@@ -20,7 +20,7 @@
 
 body{
     max-width: 480px;
-    min-width: 370px;
+    min-width: 270px;
     font-family: var(--font-padrao);
     
 }
@@ -39,7 +39,7 @@ body{
     bottom: 2.5;
     min-width: -1000%; 
     min-height: -1000%;
-    width: 138.2vw; 
+    width: 129.5vw; 
     height: 116.5vh;
     z-index: -1000;
     background: url(videos/video1.mp4);
