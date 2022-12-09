@@ -30,9 +30,7 @@ body{
     margin: 0px;
 }
 
-main{
-    height: 85vh;
-}
+
 .bg_video{
     position: fixed; 
     top: 1.5;
@@ -42,6 +40,7 @@ main{
     min-width: -1000%; 
     min-height: -1000%;
     width: 150vw; 
+    height: 116.5vh;
     z-index: -1000;
     background: url(videos/video1.mp4);
     background-size: cover; 
