@@ -13,6 +13,5 @@ function changeVideo(){
          document.getElementById('logo').src = 'imagens/redonda-logo-png.png' 
     }
     clicks++
-    document.getElementById('logo').src = 'imagens/logo-click-aqui.png'
 }
 
