@@ -118,7 +118,8 @@ section{
 
 }
 #childrenclay {
-    background-color: rgba(128, 128, 128, 0.349);
+    background-image: linear-gradient(white, rgb(128, 128, 128));
+    /* background-color: rgba(128, 128, 128, 0.349); */
     overflow: hidden;
 }
 #childrenclay > h1{
@@ -133,9 +134,14 @@ section{
     font-family: var(--font-android);
     font-size: 15px;
 }
-#childrenclay > img{
+picture > img{
+    width: 100%;
+}
+
+picture > button{
+    font-size: 15px;
     position: relative;
-    width: auto;
-    
+    border: none;
+    margin-left: auto;
     
 }
