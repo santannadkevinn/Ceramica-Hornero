@@ -110,11 +110,11 @@ body{
     margin: auto;
 }
 #url{
-    display: none;
+    display: block;
 }
 
 section{
-    display: block;
+    display: none;
 
 }
 #childrenclay {
