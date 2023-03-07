@@ -145,3 +145,7 @@ picture > button{
     margin-left: auto;
     
 }
+
+footer{
+    display: none;
+}

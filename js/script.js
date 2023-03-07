@@ -20,11 +20,12 @@ function changeAll() {
         const body = document.querySelector('body')
         body.style.backgroundColor = 'white'
         article.style.display = 'block'
+        document.querySelector('footer').style.display = 'block'
     }
     if(count % 2 == 1){
         document. getElementById('url').style.display = 'block'
         article.style.display = 'none'
-        
+        document.querySelector('footer').style.display = 'none'
     }
     count++
 }
