@@ -1,151 +1,125 @@
-@charset "utf-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
-@font-face {
-    font-family: 'SCOREBOARD';
-    src: url('../fonts/SCOREBOARD.ttf') format('truetype');
-
-}
-:root{
-    --cor1:#DEB5A9;
-    --cor2:#915543;
-    --cor3:#453834;
-    --cor4:#5E372B;
-    --cor5:#463935;
-    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --font-destaque: 'SCOREBOARD', cursive;
-    --font-android: 'Anton', cursive;
-
-}
-
-body{
-    height: auto;
-    max-width: 480px;
-    min-width: 270px;
-    font-family: var(--font-padrao);
-    
-}
-
-*{
-    padding: 0px;
-    margin: 0px;
-}
-
-
-.bg_video{
-    position: fixed; 
-    height: 116.5vh;
-    z-index: -1000;
-    background-size: cover; 
-    
-}
-
-
-#title{
-    display: none;
-    /*margin: auto;
-    width: 100vw;
-    height: 13%;
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    display: flex;
     position: fixed;
-    color: white;
-    text-align: center;
-    font-family: var(--font-destaque);
-    font-size: 40px;
-    background-size: 200% 200%;
-    background-image: linear-gradient(45deg, #daa520, #463935, #535353, #463935, #cf980c );
-    animation: mygradient 9s ease infinite;
-*/
-}
-
-
-@keyframes mygradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-#menu{
-    display: none;
-}
-
-
-
-#icon-menu{
-    background-color: white;
-    position: fixed;
-    right: 0;
-    top: 98%;
     width: 100vw;
-    margin-top: -1.5em;
-    height: auto;
-    text-align: center;
-    background-size: 200% 200%;
-    /*background-image: linear-gradient(45deg, #daa520, #463935, #535353, #463935, #cf980c );
-    animation: mygradient 9s ease infinite;*/
-}
-
-#icons{
-    color: black;
-    margin-top: 0px;
-    font-size: 30px;
-    margin-right: 40px;
-    font-weight: normal;
-}
-#last-icon{
-    color: black;
-    margin-top: 5px;
-    font-size: 30px;
-}
-
-.logo{
-    display: table-cell;
-    vertical-align: middle;
-    width: 160px;
-    margin: auto;
-}
-#url{
-    display: block;
-}
-
-section{
-    display: none;
-
-}
-#childrenclay {
-    background-image: linear-gradient(white, rgb(128, 128, 128));
-    /* background-color: rgba(128, 128, 128, 0.349); */
-    overflow: hidden;
-}
-#childrenclay > h1{
-    text-align: center;
-    font-family: var(--font-destaque);
-    font-size: 2.9em;
-    letter-spacing: 2px;
-}
-#childrenclay> p{
-    margin-top: 5px;
-    padding: 0px 38px;
-    font-family: var(--font-android);
-    font-size: 15px;
-}
-picture > img{
-    width: 100%;
-}
-
-picture > button{
-    font-size: 15px;
-    position: relative;
-    border: none;
-    margin-left: auto;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: rgb(14, 175, 14);
+    height: 8vh;
     
-}
+  }
+  
+  nav > img{
+    border-radius: 50%;
+    width: 75px;
+    position: absolute;
+    left: 10px;
+    padding: 50px;
+  }
 
-footer{
+  main {
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
     display: none;
-}
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #23232e;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  
+
+  /*main*/

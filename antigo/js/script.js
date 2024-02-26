@@ -1,30 +1,45 @@
-
-count = 0
-function changeAll() {
-    let article = document.querySelector('section')
-    if(count % 2 == 0){
-        document. getElementById('url').style.display = 'none'
-        const body = document.querySelector('body')
-        body.style.backgroundColor = 'white'
-        article.style.display = 'block'
-        document.querySelector('footer').style.display = 'block'
-        
+class MobileNavbar {
+    constructor(mobileMenu, navList, navLinks) {
+      this.mobileMenu = document.querySelector(mobileMenu);
+      this.navList = document.querySelector(navList);
+      this.navLinks = document.querySelectorAll(navLinks);
+      this.activeClass = "active";
+  
+      this.handleClick = this.handleClick.bind(this);
     }
-    if(count % 2 == 1){
-        document. getElementById('url').style.display = 'block'
-        article.style.display = 'none'
-        document.querySelector('footer').style.display = 'none'
+  
+    animateLinks() {
+      this.navLinks.forEach((link, index) => {
+        link.style.animation
+          ? (link.style.animation = "")
+          : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`);
+      });
     }
-    count++
-}
-
-const change = document.querySelector('[change-all]')
-change.onclick = changeAll
-
-
-// function imageClick(){
-//     setTimeout(function(){document.querySelector('#logo').src = './imagens/giphy.gif'},5000)
-// }
-
-// const imageclick = document.querySelector('body')
-// imageclick.onload = imageClick
+  
+    handleClick() {
+      this.navList.classList.toggle(this.activeClass);
+      this.mobileMenu.classList.toggle(this.activeClass);
+      this.animateLinks();
+    }
+  
+    addClickEvent() {
+      this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+  
+    init() {
+      if (this.mobileMenu) {
+        this.addClickEvent();
+      }
+      return this;
+    }
+  }
+  
+  const mobileNavbar = new MobileNavbar(
+    ".mobile-menu",
+    ".nav-list",
+    ".nav-list li",
+  );
+  mobileNavbar.init();
+  
